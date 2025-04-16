@@ -8,4 +8,10 @@
 
   4- Aguardar o próximo lançamento.
 
-*A interface gráfica foi gerada com auxílio de Inteligência Artificial, porém todo o núcleo (core) do código foi desenvolvido inteiramente por mim.*
+*Este script se diferencia dos demais no quesito do navegador. Para essas automações, é necessário utilizar um navegador com um perfil
+previamente logado, a fim de evitar captchas ou mecanismos de segurança que bloqueiam ações automatizadas. Por isso, "clonei"o
+repositório em uma pasta separada, permitindo abrir uma instância do navegador já vinculada a esse perfil específico. Essa abordagem
+também facilita a reutilização de código e os testes com outras automações*
+
+**A interface gráfica foi gerada com auxílio de Inteligência Artificial, porém 
+todo o núcleo (core) do código foi desenvolvido inteiramente por mim.**
