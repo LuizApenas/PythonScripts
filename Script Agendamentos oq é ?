@@ -1,0 +1,13 @@
+📅 Funções do script de agendamentos:
+  
+  1- Acessa o sistema onde são exibidos todos os agendamentos do dia;
+
+  2- Realiza uma captura de tela (screenshot) da lista de agendamentos;
+
+  3- Salva a imagem localmente;
+
+  4- Utiliza o navegador com o WhatsApp Web previamente logado para enviar a imagem;
+
+  5- Envia a imagem automaticamente em um grupo específico no WhatsApp;
+
+  6- Inclui uma mensagem automática com a data e o horário do envio.
