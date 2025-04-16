@@ -8,11 +8,6 @@ from datetime import datetime
 import time
 from selenium.webdriver.common.action_chains import ActionChains
 
-# PC SERVIDOR ECV  C:\Users\OXXYGEN\AppData\Local\Google\Chrome\User Data\Default
-# PC ISO PATRICIA C:\Users\Home\AppData\Local\Google\Chrome\User Data\Default
-# PC LUIZ C:\Users\zluiz\AppData\Local\Google\Chrome\User Data\Default
-# PC RUDGE DG C:\Users\User\AppData\Local\Google\Chrome\User Data\Default
-
 class SeleniumNavegador:
 
     def __init__(self):
@@ -25,10 +20,9 @@ class SeleniumNavegador:
         self.options.add_argument(f"user-data-dir={self.user_data_dir}")
         
         #TESTE NA MAQUINA LUIZ
-        #self.options.add_argument("--user-data-dir=C:/Users/zluiz/OneDrive/Área de Trabalho/ECV UBERLÂNDIA/PerfilGoogle")
+        #self.options.add_argument("--user-data-dir=****")
         #self.options.add_argument("--profile-directory=Profile 1") # Default é o perfil principal
         
-        #Configurações para evitar detecção
         self.options.add_argument('--disable-blink-features=AutomationControlled')
         self.options.add_argument('--disable-dev-shm-usage')
         self.options.add_argument('--no-sandbox')
@@ -41,8 +35,7 @@ class SeleniumNavegador:
         self.options.add_argument('--no-default-browser-check')
         self.options.add_argument('--disable-popup-blocking')
         self.options.add_argument('--disable-notifications')
-        
-        # Removendo o modo headless temporariamente para teste
+    
         self.options.add_argument("--headless")
     
         #WEB DRIVER DO GOOGLE COM CONFIGORAÇÕES DE PERFIL
@@ -62,21 +55,12 @@ class SeleniumNavegador:
         self.driver.get(url)
         time.sleep(15)
 
-        #LOGIN PATRICIA 29991405844
-        #SENHA PATRICIA Sta341340@ 
-
-        #LOGIN LUIZ 02265949639
-        #SENHA LUIZ Lfs341340
-
-        #LOGIN RUDGE 12694709656
-        #SENHA RUDGE Q1w2e3r4@
-
-        login = "02265949639"
+        login = "*"
         elemento_login = self.driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[1]/div[3]/div[3]/div/div[2]/div/form/div[1]/input")
         elemento_login.send_keys(login)
         time.sleep(3)
 
-        senha = "@Lfs341340"
+        senha = "*"
         elemento_senha = self.driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[1]/div[3]/div[3]/div/div[2]/div/form/div[2]/div[1]/input")
         elemento_senha.send_keys(senha)
         time.sleep(3)
@@ -108,11 +92,6 @@ class SeleniumNavegador:
         time.sleep(5)
 
     def printTelaEnvio(self):
-
-        #SERVIDOR ECV CENTRO C:\Users\OXXYGEN\Downloads\screenshot.png
-        #SERVIDOR ISO PATRICIA C:\Users\Home\Downloads\screenshot.png
-        #PC LUIZ C:\Users\zluiz\Downloads\screenshot.png
-        #PC RUDGE DG C:\Users\User\Downloads\screenshot.png
         
         #TIRA O PRINT DA TELA COM OS AGENDAMENTOS E SALVA
         
@@ -169,9 +148,9 @@ class SeleniumNavegador:
         self.driver.quit()
 
 def main():
-    #Criar uma instância da classe
+    
     navegador = SeleniumNavegador()
-    # Chamar os métodos através da instância
+    
     navegador.abrirNavegador()
     navegador.fazerLogin()
     navegador.agendamentosDia()
