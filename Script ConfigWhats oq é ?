@@ -1,0 +1,4 @@
+📁 Script de apoio
+
+Script simples utilizado para configurar o navegador com o WhatsApp Web previamente logado. Ele apenas inicia o navegador com um 
+diretório específico e mantém o WhatsApp aberto, preparando o ambiente para futuras automações que dependem dele.
