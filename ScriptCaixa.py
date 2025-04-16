@@ -62,8 +62,8 @@ class SeleniumNavegador:
     
     def fazerLogin(self):
         try:
-            email = 'isovistoriascentro@gmail.com'
-            senha = 'isocentro625'
+            email = '*'
+            senha = '*'
             elemento_email = self.driver.find_element(By.XPATH, '/html/body/div[2]/div/section/div[2]/div/div[2]/div/div/div/form/div[2]/div[1]/div/input')
             elemento_email.send_keys(email)
             time.sleep(2)
